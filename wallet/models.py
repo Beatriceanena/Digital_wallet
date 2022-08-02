@@ -102,7 +102,7 @@ class Receipt(models.Model):
     recipt_number=models.CharField(max_length=25, null=True)
     account=models.ForeignKey('Account', on_delete=models.CASCADE, related_name ='Receipts_account')
     total_Amount=models.IntegerField(default=0)
-    transaction=models.ForeignKey('Transaction', on_delete=models.CASCADE, related_name ='Receipts_transaction')
+    transaction_ref=models.CharField(max_length=255,null=True)
     recipt_File=models.FileField(upload_to='wallet/')
     
 
